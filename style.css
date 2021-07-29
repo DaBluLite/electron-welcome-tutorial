@@ -1,0 +1,405 @@
+/* Basic styling */
+* {margin: 0; padding: 0; border: 0; vertical-align: baseline;}
+html {box-sizing: border-box;}
+*, *:before, *:after {box-sizing: inherit;}
+html, body {height: 100%; margin: 0;}
+
+.loader-hidden {
+  display: none !important;
+}
+
+.btn {
+  border-radius: 4px;
+  background-color: rgba(0,0,0,.6);
+  backdrop-filter: blur(8px);
+  color: #FFF;
+  margin: 0;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.intro-btn {
+  position: absolute;
+  top: 65%;
+  left: calc(50% - 43px);
+  transition: .5s ease-out;
+  opacity: 0;
+  z-index: 100;
+  display: none;
+}
+
+#btnBackdrop {
+  position: absolute;
+  top: 67%;
+  left: calc(50% - 7.5px);
+  width: 15px;
+  height: 15px;
+  border-radius: 20px;
+  background-color: #fff;
+  z-index: 99;
+  opacity: 0;
+  transition: .5s ease-out;
+}
+
+.intro-btn-phase-3 {
+  opacity: 1 !important;
+}
+.intro-btn-phase-2 {
+  display: inline-block !important;
+}
+
+body {
+  font-family: Arial;
+  color: #FFF;
+  background-color: #1E1E1E;
+}
+.hidden {
+  opacity: 0 !important;
+  transition: .5s ease-out;
+}
+.hidden-appmenu {
+  display: none !important;
+}
+#main {
+  background: #1E1E1E;
+height: 100%;
+width: 100%;
+transition: 0.3s ease-out;
+}
+h1 {
+  margin: 0 0 10px 0;
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+.center-text-1 {
+  font-weight: bold;
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  transition: .5s ease-out;
+}
+
+.center-text-1-phase-2 {
+  top: 45% !important;
+}
+
+.center-text-2 {
+  font-weight: normal;
+  text-align: center;
+  transition: .5s ease-out;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  width: 100%;
+}
+
+h3 {
+  margin: 5px 0;
+}
+
+.center-text-2-phase-2 {
+  opacity: 1 !important;
+  top: 55% !important;
+}
+
+p {
+  margin-top: 10px;
+  color: rgba(255,255,255,0.4);
+}
+
+/* Styling of window frame and titlebar */
+body {
+  overflow-y: hidden;
+}
+
+#titlebar {
+  display: block;
+  position: relative;
+  height: 32px;
+  width: 100%;
+  transition: .5s ease-out;
+}
+
+.maximized #titlebar {
+  width: 100%;
+  padding: 0;
+}
+
+#main {
+  height: calc(100% - 32px);
+  padding: 20px;
+  overflow-y: auto;
+}
+
+#titlebar {
+  z-index: 100;
+}
+
+#titlebar #drag-region {
+  width: 100%;
+  height: 100%;
+  -webkit-app-region: drag;
+  transition: 0.3s ease-out;
+}
+
+#titlebar {
+  color: #FFF;
+  transition: 0.3s ease-out;
+}
+
+#titlebar #drag-region {
+  display: grid;
+  grid-template-columns: auto 138px;
+}
+
+#app-menu {
+  width: 300px;
+  background-color: #3E3E3E;
+  border: 1px solid #5E5E5E;
+  padding: 2px;
+  position: absolute;
+  z-index: 200;
+}
+
+#app-menu .separator {
+  width: 100%;
+  height: 1px;
+  background-color: #5E5E5E;
+  margin: 2px 0;
+}
+#app-menu .button {
+  font-size: 12px;
+  color: white;
+  width: 100%
+  height: auto;
+  padding: 5px;
+  cursor: default;
+}
+
+#app-menu .button .shortcut {
+  float: right;
+}
+
+#app-menu .button:hover {
+  background-color: #5E5E5E;
+}
+
+#window-title {
+  grid-column: 1;
+  display: flex;
+  align-items: center;
+  margin-left: 12px;
+  overflow: hidden;
+  font-family: "Segoe UI", sans-serif;
+  font-size: 12px;
+}
+.loader{
+  height: 40px;
+  width: 40px;
+  text-align: center;
+  display: inline-block;
+  vertical-align: top;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+}
+#loading {
+  background-color: rgba(0,0,0,.6);
+  width: 100%;
+  height: 100%;
+  position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index:99;
+    transition: .2s ease-out;
+}
+#overlay {
+  background-color: rgba(0,0,0,.5);
+  width: 100%;
+  height: 100%;
+  position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index:200;
+    transition: .2s ease-out;
+}
+
+#overlay-focus-1 {
+  background-color: rgba(255,255,255,.2);
+  width: 150px;
+  height: 150px;
+  position: fixed;
+    top: -75px;
+    right: -75px;
+    z-index: 199;
+    transition: .2s ease-out;
+    border-radius: 200px;
+}
+
+input:focus {
+  outline: none;
+}
+
+.maximized #window-title {
+  margin-left: 12px;
+}
+
+#window-title span {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  line-height: 1.5;
+}
+
+#window-controls {
+  display: grid;
+  grid-template-columns: repeat(3, 46px);
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  transition: 0.15s ease-out;
+}
+
+#app-menus {
+  display: grid;
+  grid-template-columns: auto auto;
+  top: 0;
+  left: 0;
+  height: 100%;
+  transition: 0.15s ease-out;
+  font-size: 12px;
+  z-index: 150;
+  -webkit-app-region: no-drag;
+  margin-left: 10px;
+}
+
+#window-controls {
+  -webkit-app-region: no-drag;
+}
+
+#window-controls .button {
+  grid-row: 1 / span 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+#app-menus .button {
+  grid-row: 1 / span 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  padding: 0 14px;
+}
+
+@media (-webkit-device-pixel-ratio: 1.5), (device-pixel-ratio: 1.5),
+(-webkit-device-pixel-ratio: 2), (device-pixel-ratio: 2),
+(-webkit-device-pixel-ratio: 3), (device-pixel-ratio: 3) {
+  #window-controls .icon {
+    width: 10px;
+    height: 10px;
+  }
+}
+
+#window-controls .button {
+  user-select: none;
+}
+
+#window-controls .button:hover {
+  background: rgba(255,255,255,0.1);
+}
+
+#window-controls .button:active {
+  background: rgba(255,255,255,0.2);
+}
+
+#app-menus .button {
+  user-select: none;
+}
+
+#app-menus .button:hover {
+  background: rgba(255,255,255,0.1);
+}
+
+#app-menus .button:active {
+  background: rgba(255,255,255,0.2);
+}
+
+#close-button:hover {
+  background: #E81123 !important;
+}
+
+#close-button:active {
+  background: #F1707A !important;
+}
+
+#close-button:active .icon {
+  filter: invert(1);
+}
+
+#min-button {
+  grid-column: 1;
+}
+
+#max-button, #restore-button {
+  grid-column: 2;
+}
+
+#close-button {
+  grid-column: 3;
+}
+
+#restore-button {
+  display: none !important;
+}
+
+.maximized #restore-button {
+  display: flex !important;
+}
+
+.maximized #max-button {
+  display: none;
+}
+
+#main {
+  width: 100%;
+  padding: 0;
+  overflow-y: auto;
+  background: #1E1E1E;
+  position: absolute;
+  transition: 0.3s ease-out;
+}
+
+#main::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+
+.titlebar-hidden {
+	height: 0 !important;
+	opacity: 0 !important;
+}
+
+.btn-hidden {
+	height: 0 !important;
+	opacity: 0 !important;
+}
+
+#window-controls .button {
+  transition: 0.15s ease-out;
+}
+
+#app-menus .button {
+  transition: 0.15s ease-out;
+}

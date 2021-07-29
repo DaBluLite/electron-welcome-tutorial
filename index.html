@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Welcome Tutorial</title>
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header id="titlebar" class="titlebar-hidden">
+      <div id="drag-region">
+
+        <div id="window-title">
+          <span>Welcome Tutorial</span>
+          <div id="app-menus">
+            <div class="button" id="file-menu">File</div>
+            <div class="button" id="edit-menu">Edit</div>
+          </div>
+        </div>
+
+
+        <div id="window-controls">
+
+          <div class="button" id="min-button">
+            <img class="icon" srcset="icons/min-w-10.png 1x, icons/min-w-12.png 1.25x, icons/min-w-15.png 1.5x, icons/min-w-15.png 1.75x, icons/min-w-20.png 2x, icons/min-w-20.png 2.25x, icons/min-w-24.png 2.5x, icons/min-w-30.png 3x, icons/min-w-30.png 3.5x" draggable="false" />
+          </div>
+          <div class="button" id="max-button">
+            <img class="icon" srcset="icons/max-w-10.png 1x, icons/max-w-12.png 1.25x, icons/max-w-15.png 1.5x, icons/max-w-15.png 1.75x, icons/max-w-20.png 2x, icons/max-w-20.png 2.25x, icons/max-w-24.png 2.5x, icons/max-w-30.png 3x, icons/max-w-30.png 3.5x" draggable="false" />
+          </div>
+          <div class="button" id="restore-button">
+            <img class="icon" srcset="icons/restore-w-10.png 1x, icons/restore-w-12.png 1.25x, icons/restore-w-15.png 1.5x, icons/restore-w-15.png 1.75x, icons/restore-w-20.png 2x, icons/restore-w-20.png 2.25x, icons/restore-w-24.png 2.5x, icons/restore-w-30.png 3x, icons/restore-w-30.png 3.5x" draggable="false" />
+          </div>
+          <div class="button" id="close-button">
+            <img class="icon" srcset="icons/close-w-10.png 1x, icons/close-w-12.png 1.25x, icons/close-w-15.png 1.5x, icons/close-w-15.png 1.75x, icons/close-w-20.png 2x, icons/close-w-20.png 2.25x, icons/close-w-24.png 2.5x, icons/close-w-30.png 3x, icons/close-w-30.png 3.5x" draggable="false" />
+          </div>
+
+        </div>
+      </div>
+    </header>
+    <div id="app-menu" class="hidden-appmenu">
+      
+    </div>
+    <div id="main">
+      <h3 id="firstText" class="center-text-1 hidden">
+        Welcome to the Welcome Tutorial App!
+      </h3>
+      <h3 id="secondText" class="center-text-2">
+        Let's get started!
+      </h3>
+      <a id="introBtn" class="btn intro-btn raise" disabled>
+        Continue
+      </a>
+    </div>
+    <div id="loading" class="loader-hidden">
+      <div class="loader loader--style2" title="1">
+        <svg version="1.1" id="loader-1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+           width="40px" height="40px" viewBox="0 0 50 50" style="enable-background:new 0 0 50 50;" xml:space="preserve">
+        <path fill="#fff" d="M25.251,6.461c-10.318,0-18.683,8.365-18.683,18.683h4.068c0-8.071,6.543-14.615,14.615-14.615V6.461z">
+          <animateTransform attributeType="xml"
+            attributeName="transform"
+            type="rotate"
+            from="0 25 25"
+            to="360 25 25"
+            dur="0.6s"
+            repeatCount="indefinite"/>
+          </path>
+        </svg>
+      </div>
+    </div>
+    <script>
+      // You can also require other files to run in this process
+      require('./renderer.js')
+    </script>
+  </body>
+</html>
