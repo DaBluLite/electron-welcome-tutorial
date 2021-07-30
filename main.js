@@ -1,3 +1,5 @@
+// Μπουγάτσα
+
 const {app, BrowserWindow} = require('electron');
 const { ipcMain } = require('electron');
 const ipc = ipcMain;
