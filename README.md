@@ -4,7 +4,7 @@
 
 #### To start using this repository:
 ##### 1. Clone the repository with:
-```git clone htttps://github.com/DaBluLite/electron-welcome-tutorial.git```
+```git clone https://github.com/DaBluLite/electron-welcome-tutorial.git```
 ##### or by downloading the repository as a zip file.
 ##### 2. (You need Node.JS installed for this) go into the project folder on an open command prompt (Windows) or terminal emulator (macOS and Linux) and type:
 ```npm i```.
