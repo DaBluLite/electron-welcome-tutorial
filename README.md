@@ -12,6 +12,3 @@
 ```npm start```
 
 ### Good Luck!
-
-
-#### I made this app just as a proof of concept that a 16yo can write good nodejs and electron apps. You can use this code for whatever you want!
